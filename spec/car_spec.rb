@@ -1,10 +1,13 @@
+# Instance methods:
 require 'car'
 
 describe 'Car' do
 
-  describe 'attributes' do
+  describe 'attributes' do #xdescribe skips all tests
     
     it "allows reading and writing for :make" do
+      #If typed "skip("why was scenario skipped")" here
+      #If typed "pending("Why was scenario pending")", pending still runs test but with message
       car = Car.new
       car.make = 'Test'
       expect(car.make).to eq('Test')
@@ -26,7 +29,9 @@ describe 'Car' do
       car = Car.new
       expect(car.wheels).to eq(4)
     end
-    
+
+    it "allows writing for :doors"  #pending example or stub
+
   end
   
   describe '.colors' do
